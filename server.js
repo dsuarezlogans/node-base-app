@@ -10,8 +10,7 @@ mongoose.Promise = global.Promise;
 mongoose
   .connect(config.db)
   .then(() => console.log('Conectado a MongoDB satisfatoriamente.'))
-  .catch(error => console.error(`Error al conectar a la base de datos: ${error}`));
-
-app.listen(config.port, () => console.log(`Servidor con entorno ${config.env} corriendo en http://localhost:${config.port}`));
+  .then(() => app.listen(config.port, () => console.log(`Servidor con entorno ${config.env} corriendo en http://localhost:${config.port}`)))
+  .catch(error => console.error(`Error encontrado: ${error}`));
 
 module.exports = { server: app };
