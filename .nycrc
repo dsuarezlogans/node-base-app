@@ -1,0 +1,21 @@
+{
+  "check-coverage": true,
+  "cache": true,
+   "exclude": [
+     "node_modules/*"
+  ],
+  "include": [
+    "src/*.js",
+    "src/**/*.js"
+  ],
+  "instrument": false,
+  "reporter": [
+    "html",
+    "lcov",
+    "text"
+  ],
+  "all": true,
+  "sourceMap": false,
+  "temp-directory": "./alternative-tmp",
+  "report-dir": "./alternative"
+}
